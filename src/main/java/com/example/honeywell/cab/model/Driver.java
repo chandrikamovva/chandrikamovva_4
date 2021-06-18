@@ -11,11 +11,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotNull;
+
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.mytaxi.constants.OnlineStatus;
+import com.example.honeywell.cab.constants.OnlineStatus;
+
+
 
 @Entity
 @Table(
@@ -33,11 +35,10 @@ public class Driver
     private ZonedDateTime dateCreated = ZonedDateTime.now();
 
     @Column(nullable = false)
-    @NotNull(message = "Username can not be null!")
     private String username;
 
     @Column(nullable = false)
-    @NotNull(message = "Password can not be null!")
+    
     private String password;
 
     @Column(nullable = false)

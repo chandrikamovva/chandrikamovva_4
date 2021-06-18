@@ -18,7 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.honeywell.cab.constants.*;
 import com.example.honeywell.cab.dto.DriverDTO;
+import com.example.honeywell.cab.exception.CarAlreadyInUseException;
+import com.example.honeywell.cab.exception.ConstraintsViolationException;
 import com.example.honeywell.cab.exception.EntityNotFoundException;
+import com.example.honeywell.cab.mapping.DriverMapper;
+import com.example.honeywell.cab.model.Driver;
 import com.example.honeywell.cab.service.DriverService;
 
 
